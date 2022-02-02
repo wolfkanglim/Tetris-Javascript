@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris/Javascript</title>
+    <style>
+      body {
+        background-color: rgb(6, 159, 206);
+      }
+      #canvas {
+        margin-left: 100px;
+        border: 3px solid #333;
+      }
+      div {
+        font-family: monospace;
+        font-size: 2rem;
+        text-align: left;
+      }
+      #btn {
+        margin-left: 10px;
+        cursor: pointer;
+      }
+      h2 {
+        margin-left: 100px;
+      }
+      #scoreBoard {
+        margin-left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>TETRIS GAME</h2>
+    <canvas id="canvas" width="288" height="480"></canvas>
+    <div id="scoreBoard">
+      SCORE:
+      <span id="score">0</span>
+      <button id="btn" onclick="startGame()">Start Game</button>
+    </div>
+    <audio id="bgm" loop>
+      <source src="../gamesound/tetrisbgm.wav" />
+    </audio>
+    <audio id="gameEnd">
+      <source src="../gamesound/tetristurn.wav" />
+    </audio>
+    <audio id="collapse">
+      <source src="../gamesound/moneybell4.mp3" />
+    </audio>
+    <audio id="turn">
+      <source src="../gamesound/moneybell2.mp3" />
+    </audio>
+    <audio id="lock">
+      <source src="../gamesound/moneybell1.mp3" />
+    </audio>
+
+    <script src="tetrimino.js"></script>
+    <script src="tetris.js"></script>
+  </body>
+</html>
